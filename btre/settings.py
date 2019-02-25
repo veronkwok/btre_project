@@ -143,23 +143,14 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
 
-# Email configurations
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'veronkyn@gmail.com'
-# EMAIL_HOST_PASSWORD = 'kd4$0:Gm1'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-
 # Outlook Mail Config
-# EMAIL_HOST = 'smtp.office365.com'
-# EMAIL_HOST_USER = 'veronkyn@msn.com'
-# EMAIL_HOST_PASSWORD = 'kd4$0:Hm1'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.office365.com'
+EMAIL_HOST_USER = 'veronkyn@msn.com'
+EMAIL_HOST_PASSWORD = 'kd4$0:Hm1'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
-# veronkwok.com Webmail Config
-EMAIL_HOST = 'mail.veronkwok.com'
-EMAIL_HOST_USER = 'veron@veronkwok.com'
-EMAIL_HOST_PASSWORD = 'v3r0nkyn'
-EMAIL_PORT = 465
-EMAIL_USE_SSL = True
+try:
+    from .local_settings import *
+except ImportError:
+    pass
