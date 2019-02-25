@@ -143,13 +143,6 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
 
-# Outlook Mail Config
-EMAIL_HOST = 'smtp.office365.com'
-EMAIL_HOST_USER = 'veronkyn@msn.com'
-EMAIL_HOST_PASSWORD = 'kd4$0:Hm1'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-
 try:
     from .local_settings import *
 except ImportError:
